@@ -52,6 +52,8 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        navigationController!.popViewController(animated: true)
+        
     }
     
 }
