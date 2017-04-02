@@ -43,6 +43,15 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func addTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let book = Books(context: context)
+        book.title = titleTextField.text
+        book.cover = UIImagePNGRepresentation(bookImageView.image!) as NSData!
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
     }
     
 }
