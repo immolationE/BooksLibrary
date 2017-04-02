@@ -13,6 +13,8 @@
 		7915E60C1E919FC70054A1DE /* BooksLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7915E60A1E919FC70054A1DE /* BooksLibrary.xcdatamodeld */; };
 		7915E60E1E919FC70054A1DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7915E60D1E919FC70054A1DE /* Assets.xcassets */; };
 		7915E6111E919FC70054A1DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7915E60F1E919FC70054A1DE /* LaunchScreen.storyboard */; };
+		7915E6191E91A7410054A1DE /* ENSO THE CIRCLE OF LIFE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7915E6181E91A7410054A1DE /* ENSO THE CIRCLE OF LIFE.jpg */; };
+		7915E61B1E91AA270054A1DE /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7915E61A1E91AA270054A1DE /* BookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7915E60D1E919FC70054A1DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7915E6101E919FC70054A1DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7915E6121E919FC70054A1DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7915E6181E91A7410054A1DE /* ENSO THE CIRCLE OF LIFE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ENSO THE CIRCLE OF LIFE.jpg"; sourceTree = "<group>"; };
+		7915E61A1E91AA270054A1DE /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 		7915E6021E919FC70054A1DE /* BooksLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				7915E6181E91A7410054A1DE /* ENSO THE CIRCLE OF LIFE.jpg */,
 				7915E6031E919FC70054A1DE /* AppDelegate.swift */,
 				7915E6051E919FC70054A1DE /* ViewController.swift */,
 				7915E6071E919FC70054A1DE /* Main.storyboard */,
+				7915E61A1E91AA270054A1DE /* BookViewController.swift */,
 				7915E60D1E919FC70054A1DE /* Assets.xcassets */,
 				7915E60F1E919FC70054A1DE /* LaunchScreen.storyboard */,
 				7915E6121E919FC70054A1DE /* Info.plist */,
@@ -130,6 +136,7 @@
 				7915E6111E919FC70054A1DE /* LaunchScreen.storyboard in Resources */,
 				7915E60E1E919FC70054A1DE /* Assets.xcassets in Resources */,
 				7915E6091E919FC70054A1DE /* Main.storyboard in Resources */,
+				7915E6191E91A7410054A1DE /* ENSO THE CIRCLE OF LIFE.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7915E60C1E919FC70054A1DE /* BooksLibrary.xcdatamodeld in Sources */,
+				7915E61B1E91AA270054A1DE /* BookViewController.swift in Sources */,
 				7915E6061E919FC70054A1DE /* ViewController.swift in Sources */,
 				7915E6041E919FC70054A1DE /* AppDelegate.swift in Sources */,
 			);

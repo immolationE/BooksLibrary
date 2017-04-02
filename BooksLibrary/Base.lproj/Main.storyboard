@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="966" y="124"/>
         </scene>
-        <!--View Controller-->
+        <!--Book View Controller-->
         <scene sceneID="SUY-Ua-8cA">
             <objects>
-                <viewController id="eeM-9H-QPW" sceneMemberID="viewController">
+                <viewController id="eeM-9H-QPW" customClass="BookViewController" customModule="BooksLibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kSi-8M-r0x"/>
                         <viewControllerLayoutGuide type="bottom" id="S1R-vi-VXf"/>
@@ -47,14 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-xV-V6G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ENSO THE CIRCLE OF LIFE.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bM0-xV-V6G">
                                 <rect key="frame" x="47" y="84" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="3x5-z2-pd3"/>
                                     <constraint firstAttribute="height" constant="150" id="EGM-at-sSa"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-ff-edv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-ff-edv">
                                 <rect key="frame" x="47.5" y="256" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bz-ze-IzK">
                                 <rect key="frame" x="172" y="306" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="eeM-9H-QPW" eventType="touchUpInside" id="JRw-su-Ul4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,10 +81,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="y30-Cb-1xe">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="cY0-Dz-pVm"/>
-                            <barButtonItem title="Photos" id="oXa-aA-p3w"/>
+                            <barButtonItem systemItem="camera" id="cY0-Dz-pVm">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="eeM-9H-QPW" id="kbk-4h-dNf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="oXa-aA-p3w">
+                                <connections>
+                                    <action selector="photosTapped:" destination="eeM-9H-QPW" id="te0-Cc-TRT"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bookImageView" destination="bM0-xV-V6G" id="Xwg-vT-nu9"/>
+                        <outlet property="titleTextField" destination="aTt-ff-edv" id="pCZ-II-z82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LN8-pL-CKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,4 +121,7 @@
             <point key="canvasLocation" x="239" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ENSO THE CIRCLE OF LIFE.jpg" width="756" height="751"/>
+    </resources>
 </document>
