@@ -277,6 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NH5X7PMXTF;
 				INFOPLIST_FILE = BooksLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RELDER.BooksLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NH5X7PMXTF;
 				INFOPLIST_FILE = BooksLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RELDER.BooksLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +318,7 @@
 				7915E6171E919FC70054A1DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
