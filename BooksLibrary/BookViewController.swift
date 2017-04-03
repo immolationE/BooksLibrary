@@ -58,16 +58,37 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBAction func addTapped(_ sender: Any) {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let book = Books(context: context)
-        book.title = titleTextField.text
-        book.cover = UIImagePNGRepresentation(bookImageView.image!) as NSData!
+        if volume != nil {
+            
+            volume!.title = titleTextField.text
+            volume!.cover = UIImagePNGRepresentation(bookImageView.image!) as NSData!
+            
+        } else {
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let book = Books(context: context)
+            book.title = titleTextField.text
+            book.cover = UIImagePNGRepresentation(bookImageView.image!) as NSData!
+            
+        }
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         navigationController!.popViewController(animated: true)
         
     }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(volume!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController!.popViewController(animated: true)
+        
+    }
+    
     
 }
