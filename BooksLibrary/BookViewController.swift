@@ -12,13 +12,27 @@ class BookViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var addUpdateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     
     var imagePicker = UIImagePickerController()
+    var volume : Books? = nil
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if volume != nil {
+            bookImageView.image = UIImage(data: volume!.cover as! Data)
+            titleTextField.text = volume!.title
+            
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
 
         // Do any additional setup after loading the view.
     }

@@ -45,6 +45,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.imageView?.image = UIImage(data: volume.cover! as Data)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let volume = volumes[indexPath.row]
+        performSegue(withIdentifier: "bookSegue", sender: volume)
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! BookViewController
+        nextVC.volume = sender as? Books
+    }
 
 }
 
